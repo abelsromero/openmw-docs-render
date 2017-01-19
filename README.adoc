@@ -1,0 +1,30 @@
+= Sphinx image for building OpenMW docs
+:openmw-github: https://github.com/OpenMW/
+
+== Image description
+
+This Docker images provides:
+
+* Python 3.6 (on Alpine 3.4)
+* Python packages:
+** Breathe (https://github.com/michaeljones/breathe)
+** parse_cmake (https://github.com/wjwwood/parse_cmake)
+* Doxygen (http://www.stack.nl/~dimitri/doxygen/)
+
+== How to use it
+
+. Fork/clone the OpenMW repo link:
+{openmw-github}[]
+
+. Start an interactive (`-it`) non-persisted (`--rm`) container
+
+ docker run -it --rm -v <openmw directory>:/docs openmw-docs-render
++
+This will map the openmw directory to `/docs_` in the container.
+
+. Run the render command from the container shell:
+
+ sphinx-build -b html source build
++
+All generated files will be located in `/openmw/docs/build`.
+These are already added to `.gitignore`.
