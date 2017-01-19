@@ -10,7 +10,8 @@ RUN pip install breathe parse_cmake && \
     apk add --no-cache doxygen && \
     mkdir /docs
 
-WORKDIR /docs
-VOLUME /docs
+VOLUME /openmw
+
+WORKDIR /openmw/docs
 
 CMD ["/bin/ash"]
