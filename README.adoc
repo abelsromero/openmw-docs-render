@@ -7,6 +7,7 @@ This Docker images provides:
 
 * Python 3.6 (on Alpine 3.4)
 * Python packages:
+** Sphinx (http://www.sphinx-doc.org/en/1.5.1/)
 ** Breathe (https://github.com/michaeljones/breathe)
 ** parse_cmake (https://github.com/wjwwood/parse_cmake)
 * Doxygen (http://www.stack.nl/~dimitri/doxygen/)
@@ -16,11 +17,11 @@ This Docker images provides:
 . Fork/clone the OpenMW repo link:
 {openmw-github}[]
 
-. Start an interactive (`-it`) non-persisted (`--rm`) container
+. Start an interactive (`-it`) non-persisted (`--rm`) container:
 
  docker run -it --rm -v <openmw directory>:/docs openmw-docs-render
 +
-This will map the openmw directory to `/docs_` in the container.
+This will map the openmw directory to `/openmw` in the container.
 
 . Run the render command from the container shell:
 
