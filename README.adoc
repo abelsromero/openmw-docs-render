@@ -19,7 +19,7 @@ This Docker images provides:
 
 . Start an interactive (`-it`) non-persisted (`--rm`) container:
 
- docker run -it --rm -v <openmw directory>:/docs openmw-docs-render
+ docker run -it --rm -v <openmw directory>:/docs abelsromero/openmw-docs-render
 +
 This will map the openmw directory to `/openmw` in the container.
 
